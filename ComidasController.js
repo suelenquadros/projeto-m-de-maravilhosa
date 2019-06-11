@@ -11,11 +11,13 @@ const getAll = async () => {
   })
 }
 
-const getById = (id) => {
-  const comidaCadastrada =getAll().find(comida =>{
-    return comida.id ===id  
-  })
- return comidaCadastrada
+const getById = async (id) => {
+  const comidasModel.findById(
+    id,
+    (error, comida) => {
+  }
+  )
+
 }
 
 const add = (comida) => {
